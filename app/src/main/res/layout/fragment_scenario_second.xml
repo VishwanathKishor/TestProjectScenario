@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="travelGuidance"
+            type="com.example.vishwanath.DataBinding.TravelGuidance" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_30dp"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spnFSSNames"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30dp"
+                android:text="@string/mode_of_transport"
+                android:textSize="@dimen/normal_text_20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblFSSfromcentral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:text="@{travelGuidance.fromcentral}" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_30dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnFSSNavigate"
+                    android:layout_width="150dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_margin="@dimen/margin_2dp"
+                    android:background="@xml/button_background"
+                    android:gravity="center"
+                    android:text="@string/navigate"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

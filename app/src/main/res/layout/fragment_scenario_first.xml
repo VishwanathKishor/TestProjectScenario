@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:scrollbars="horizontal">
+
+            <Button
+                android:id="@+id/btnFSFItemFirst"
+                style="@style/RegularBtn"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/item_1" />
+
+            <Button
+                android:id="@+id/btnFSFItemSecond"
+                style="@style/RegularBtn"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/item_2" />
+
+            <Button
+                android:id="@+id/btnFSFItemThird"
+                style="@style/RegularBtn"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/item_3" />
+
+            <Button
+                android:id="@+id/btnFSFItemFourth"
+                style="@style/RegularBtn"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/item_4" />
+
+            <Button
+                android:id="@+id/btnFSFItemFifth"
+                style="@style/RegularBtn"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/item_5" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPagerFSF"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10dp"
+                android:layout_marginLeft="@dimen/margin_30dp"
+                android:layout_marginTop="@dimen/margin_10dp">
+
+                <TextView
+                    android:id="@+id/lblOneFSF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/text_view_1" />
+
+                <TextView
+                    android:id="@+id/lblSecondFSF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lblOneFSF"
+                    android:layout_toEndOf="@+id/lblOneFSF"
+                    android:layout_toRightOf="@+id/lblOneFSF"
+                    android:text="@string/text_view_2" />
+
+                <TextView
+                    android:id="@+id/lblThirdFSF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lblSecondFSF"
+                    android:layout_toEndOf="@+id/lblSecondFSF"
+                    android:layout_toRightOf="@+id/lblSecondFSF"
+                    android:text="@string/text_view_3" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblFSFSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorLavenderBlush"
+                    android:gravity="center"
+                    android:textSize="@dimen/large_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutFSFChangeColor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:textColor="@color/colorWhite"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/btnFSFGray"
+                    style="@style/RegularBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginRight="@dimen/margin_5dp"
+                    android:layout_weight="1.2"
+                    android:text="@string/gray" />
+
+                <Button
+                    android:id="@+id/btnFSFPink"
+                    style="@style/RegularBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="@dimen/margin_5dp"
+                    android:layout_marginRight="@dimen/margin_5dp"
+                    android:layout_weight="1.2"
+                    android:text="@string/magenta" />
+
+                <Button
+                    android:id="@+id/btnFSFYellow"
+                    style="@style/RegularBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_margin="@dimen/margin_2dp"
+                    android:layout_marginLeft="@dimen/margin_5dp"
+                    android:layout_weight="1.2"
+                    android:text="@string/yellow" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

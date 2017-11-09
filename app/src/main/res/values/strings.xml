@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Select Scenario</string>
+    <string name="drawer_close">Test</string>
+    <string name="custom_progressbar_text">Please Wait...</string>
+    <string name="mode_of_transport">Mode Of Transport</string>
+    <string name="navigate">Navigate</string>
+    <string name="item_1">Item 1</string>
+    <string name="item_2">Item 2</string>
+    <string name="item_3">Item 3</string>
+    <string name="item_4">Item 4</string>
+    <string name="item_5">Item 5</string>
+    <string name="text_view_1">Text View 1</string>
+    <string name="text_view_2">Text View 2</string>
+    <string name="text_view_3">Text View 3</string>
+    <string name="gray">Gray</string>
+    <string name="magenta">Magenta</string>
+    <string name="yellow">Yellow</string>
+
+    <string name="text_1">1</string>
+    <string name="text_2">2</string>
+    <string name="text_3">3</string>
+    <string name="text_4">4</string>
+</resources>
