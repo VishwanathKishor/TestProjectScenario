@@ -33,9 +33,6 @@ public class ViewPagerFSFAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         try {
             switch (position) {
-                case 0:
-                    fList.set(position, new FragmentFirst());
-                    return fList.get(position);
                 case 1:
                     fList.set(position, new FragmentSecond());
                     return fList.get(position);
