@@ -30,7 +30,8 @@
                 android:layout_marginTop="@dimen/margin_30dp"
                 android:text="@string/mode_of_transport"
                 android:textSize="@dimen/normal_text_20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:gravity="center"/>
 
             <TextView
                 android:id="@+id/lblFSSfromcentral"
@@ -38,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_5dp"
                 android:layout_marginTop="@dimen/margin_10dp"
+                android:gravity="center"
                 android:text="@{travelGuidance.fromcentral}" />
 
             <LinearLayout

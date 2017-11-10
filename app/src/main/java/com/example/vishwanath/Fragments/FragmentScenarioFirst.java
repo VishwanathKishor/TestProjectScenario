@@ -14,7 +14,8 @@ import android.widget.TextView;
 import com.example.vishwanath.CustomAdapters.ViewPagerFSFAdapter;
 import com.example.vishwanath.testprojecthttpscenario.R;
 
-;
+;import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by android-linux-mv on 8/11/17.
@@ -28,7 +29,8 @@ public class FragmentScenarioFirst extends Fragment implements View.OnClickListe
     LinearLayout layoutFSFChangeColor;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
         try {
             View view = inflater.inflate(R.layout.fragment_scenario_first, container, false);
             viewPagerFSF = (ViewPager) view.findViewById(R.id.viewPagerFSF);
@@ -52,8 +54,13 @@ public class FragmentScenarioFirst extends Fragment implements View.OnClickListe
             btnFSFItemThird.setOnClickListener(FragmentScenarioFirst.this);
             btnFSFItemFourth.setOnClickListener(FragmentScenarioFirst.this);
             btnFSFItemFifth.setOnClickListener(FragmentScenarioFirst.this);
-
-            viewPagerFSFAdapter = new ViewPagerFSFAdapter(getActivity().getSupportFragmentManager());
+            List<Fragment> fList = new ArrayList<>();
+            fList.add(new FragmentFirst());
+            fList.add(new FragmentSecond());
+            fList.add(new FragmentThird());
+            fList.add(new FragmentForth());
+            viewPagerFSFAdapter = new ViewPagerFSFAdapter(getActivity().getSupportFragmentManager(),
+                    fList);
             viewPagerFSF.setAdapter(viewPagerFSFAdapter);
 
             return view;

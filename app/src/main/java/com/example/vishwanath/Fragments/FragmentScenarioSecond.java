@@ -113,12 +113,14 @@ public class FragmentScenarioSecond extends Fragment implements
                 try {
                     JSONObject jsonObject = result.getJSONObject(selectedPosition);
                     JSONObject location = jsonObject.getJSONObject("location");
-                    Uri gmmIntentUri = Uri.parse("geo:" + location.getString("latitude") + "," + location.getString("longitude"));
-                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                    mapIntent.setPackage("com.google.android.apps.maps");
-                    if (mapIntent.resolveActivity(activity.getPackageManager()) != null) {
-                        startActivity(mapIntent);
-                    }
+
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:<" +
+                            location.getString("latitude")  + ">,<" +
+                            location.getString("longitude") + ">?q=<" +
+                            location.getString("latitude")  + ">,<" +
+                            location.getString("longitude") + ">(" +
+                            jsonObject.getString("name") + ")"));
+                    startActivity(mapIntent);
                 } catch (JSONException ex) {
                     ex.printStackTrace();
                 } catch (Exception ex) {
@@ -162,6 +164,7 @@ public class FragmentScenarioSecond extends Fragment implements
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     // TODO Auto-generated method stub
+                    progressDialog.dismiss();
                     Toast.makeText(activity, "Unable to connect server..!", Toast.LENGTH_LONG).show();
                 }
             });

@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
 import com.example.vishwanath.Fragments.FragmentScenarioFirst;
 import com.example.vishwanath.Fragments.FragmentScenarioSecond;
 
@@ -117,5 +118,4 @@ public class MainActivity extends FragmentActivity {
             ex.printStackTrace();
         }
     }
-
 }

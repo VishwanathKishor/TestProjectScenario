@@ -66,40 +66,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp" />
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_10dp"
                 android:layout_marginLeft="@dimen/margin_30dp"
-                android:layout_marginTop="@dimen/margin_10dp">
+                android:layout_marginRight="@dimen/margin_30dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/lblOneFSF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_gravity="left"
                     android:text="@string/text_view_1" />
 
                 <TextView
                     android:id="@+id/lblSecondFSF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/lblOneFSF"
-                    android:layout_toEndOf="@+id/lblOneFSF"
-                    android:layout_toRightOf="@+id/lblOneFSF"
+                    android:layout_gravity="center"
                     android:text="@string/text_view_2" />
 
                 <TextView
                     android:id="@+id/lblThirdFSF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/lblSecondFSF"
-                    android:layout_toEndOf="@+id/lblSecondFSF"
-                    android:layout_toRightOf="@+id/lblSecondFSF"
+                    android:layout_gravity="right"
                     android:text="@string/text_view_3" />
-            </RelativeLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
