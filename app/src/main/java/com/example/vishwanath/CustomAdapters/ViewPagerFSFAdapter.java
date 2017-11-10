@@ -22,7 +22,8 @@ public class ViewPagerFSFAdapter extends FragmentPagerAdapter {
     private List<Fragment> fList;
     private FragmentManager fragmentManager;
     private int numberOfPages;
-    public ViewPagerFSFAdapter(FragmentManager fragmentManager, List<Fragment> fList) {
+    public ViewPagerFSFAdapter(FragmentManager fragmentManager,
+                               List<Fragment> fList) {
         super(fragmentManager);
         this.fList = fList;
         this.fragmentManager = fragmentManager;
